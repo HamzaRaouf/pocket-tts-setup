@@ -1,0 +1,7 @@
+# Pocket TTS — Voice Browser
+# Python 3.11+
+
+pocket-tts>=2.1.0
+fastapi>=0.141.1
+uvicorn>=0.52.4
+scipy>=1.17.1

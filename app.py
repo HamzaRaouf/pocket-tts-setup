@@ -57,12 +57,10 @@ def _get_voice_state(voice_id: str):
 
 def _audio_to_wav_bytes(audio, sample_rate: int) -> bytes:
     arr = audio.detach().cpu().numpy() if hasattr(audio, "detach") else np.asarray(audio)
-    if arr.dtype != np.float32:
-        arr = arr.astype(np.float32)
-    # scipy expects int16 or float in [-1, 1]; clip floats for safety
-    arr = np.clip(arr, -1.0, 1.0)
+    arr = np.clip(arr.astype(np.float32), -1.0, 1.0)
+    pcm = (arr * 32767.0).astype(np.int16)
     buf = io.BytesIO()
-    scipy.io.wavfile.write(buf, sample_rate, arr)
+    scipy.io.wavfile.write(buf, sample_rate, pcm)
     return buf.getvalue()
 
 

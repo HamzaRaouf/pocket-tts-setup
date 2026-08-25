@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pocket TTS — Listen to every voice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1a1714;
+      --muted: #5c564e;
+      --paper: #f3eee4;
+      --panel: rgba(255, 252, 246, 0.9);
+      --line: rgba(26, 23, 20, 0.12);
+      --accent: #0f6e56;
+      --font-display: "Fraunces", Georgia, serif;
+      --font-body: "IBM Plex Sans", "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background:
+        radial-gradient(900px 500px at 8% -10%, #e8d7b8 0%, transparent 60%),
+        radial-gradient(700px 480px at 100% 0%, #cfe8df 0%, transparent 55%),
+        linear-gradient(180deg, #f7f2e8 0%, #ebe4d6 100%);
+      min-height: 100vh;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      margin: 0 0 0.4rem;
+    }
+    .lede { color: var(--muted); margin: 0 0 1.75rem; max-width: 40rem; }
+    h2 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      margin: 1.75rem 0 0.75rem;
+    }
+    .card {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.45rem;
+      padding: 0.95rem 1rem;
+      margin-bottom: 0.65rem;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--panel);
+    }
+    @media (min-width: 700px) {
+      .card {
+        grid-template-columns: 160px 1fr auto;
+        align-items: center;
+      }
+    }
+    .name { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; }
+    audio { width: 100%; max-width: 320px; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <p style="margin:0 0 0.35rem;font-family:var(--font-display);font-size:1.4rem;font-weight:700;">Pocket TTS</p>
+    <h1>Listen to every voice</h1>
+    <p class="lede">Pre-generated samples from the Voice Browser. Use the players below — no install needed.</p>
+
+    <h2>English</h2>
+    <div id="en"></div>
+
+    <h2>Other languages</h2>
+    <div id="other"></div>
+  </main>
+  <script>
+    const voices = [
+      { id: "alba", name: "Alba", language: "English", sample: "Hello, my name is Alba." },
+      { id: "anna", name: "Anna", language: "English", sample: "Hello, my name is Anna." },
+      { id: "azelma", name: "Azelma", language: "English", sample: "Hello, my name is Azelma." },
+      { id: "bill_boerst", name: "Bill Boerst", language: "English", sample: "Hello, my name is Bill Boerst." },
+      { id: "caro_davy", name: "Caro Davy", language: "English", sample: "Hello, my name is Caro Davy." },
+      { id: "charles", name: "Charles", language: "English", sample: "Hello, my name is Charles." },
+      { id: "cosette", name: "Cosette", language: "English", sample: "Hello, my name is Cosette." },
+      { id: "eponine", name: "Eponine", language: "English", sample: "Hello, my name is Eponine." },
+      { id: "eve", name: "Eve", language: "English", sample: "Hello, my name is Eve." },
+      { id: "fantine", name: "Fantine", language: "English", sample: "Hello, my name is Fantine." },
+      { id: "george", name: "George", language: "English", sample: "Hello, my name is George." },
+      { id: "jane", name: "Jane", language: "English", sample: "Hello, my name is Jane." },
+      { id: "jean", name: "Jean", language: "English", sample: "Hello, my name is Jean." },
+      { id: "javert", name: "Javert", language: "English", sample: "Hello, my name is Javert." },
+      { id: "marius", name: "Marius", language: "English", sample: "Hello, my name is Marius." },
+      { id: "mary", name: "Mary", language: "English", sample: "Hello, my name is Mary." },
+      { id: "michael", name: "Michael", language: "English", sample: "Hello, my name is Michael." },
+      { id: "paul", name: "Paul", language: "English", sample: "Hello, my name is Paul." },
+      { id: "peter_yearsley", name: "Peter Yearsley", language: "English", sample: "Hello, my name is Peter Yearsley." },
+      { id: "stuart_bell", name: "Stuart Bell", language: "English", sample: "Hello, my name is Stuart Bell." },
+      { id: "vera", name: "Vera", language: "English", sample: "Hello, my name is Vera." },
+      { id: "estelle", name: "Estelle", language: "French", sample: "Bonjour, je m'appelle Estelle." },
+      { id: "giovanni", name: "Giovanni", language: "Italian", sample: "Ciao, mi chiamo Giovanni." },
+      { id: "lola", name: "Lola", language: "Spanish", sample: "Hola, me llamo Lola." },
+      { id: "juergen", name: "Juergen", language: "German", sample: "Hallo, ich heiße Juergen." },
+      { id: "rafael", name: "Rafael", language: "Portuguese", sample: "Olá, o meu nome é Rafael." },
+    ];
+
+    // Prefer relative paths (GitHub Pages / local). Fallback to raw GitHub CDN.
+    const RAW = "https://raw.githubusercontent.com/HamzaRaouf/pocket-tts-setup/main/samples";
+
+    function card(v) {
+      const src = `samples/${v.id}.wav`;
+      const el = document.createElement("article");
+      el.className = "card";
+      el.innerHTML = `
+        <div>
+          <div class="name">${v.name}</div>
+          <div class="meta">${v.language}</div>
+        </div>
+        <div class="meta">${v.sample}</div>
+        <audio controls preload="none" src="${src}"
+          onerror="this.onerror=null; this.src='${RAW}/${v.id}.wav'"></audio>
+      `;
+      return el;
+    }
+
+    const en = document.getElementById("en");
+    const other = document.getElementById("other");
+    for (const v of voices) {
+      (v.language === "English" ? en : other).appendChild(card(v));
+    }
+  </script>
+</body>
+</html>

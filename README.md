@@ -18,45 +18,55 @@ A local web app to listen to every built-in [Pocket TTS](https://github.com/kyut
 
 ## Listen to every voice
 
-Click **Play** in the player, or open the file link if the player does not appear.
+GitHub README pages **cannot embed audio players** (HTML `<audio>` is stripped). Use one of these instead:
+
+1. **Best:** open the [Listen gallery](listen.html) after enabling GitHub Pages (see below), or open any sample file below — GitHub’s file page has a built-in player.
+2. **Quick:** click **▶ Listen** on a voice (opens the `.wav` with GitHub’s player).
 
 ### English
 
 | Voice | Sample | Listen |
 | --- | --- | --- |
-| Alba | Hello, my name is Alba. | <audio controls preload="none" src="samples/alba.wav"></audio> [alba.wav](samples/alba.wav) |
-| Anna | Hello, my name is Anna. | <audio controls preload="none" src="samples/anna.wav"></audio> [anna.wav](samples/anna.wav) |
-| Azelma | Hello, my name is Azelma. | <audio controls preload="none" src="samples/azelma.wav"></audio> [azelma.wav](samples/azelma.wav) |
-| Bill Boerst | Hello, my name is Bill Boerst. | <audio controls preload="none" src="samples/bill_boerst.wav"></audio> [bill_boerst.wav](samples/bill_boerst.wav) |
-| Caro Davy | Hello, my name is Caro Davy. | <audio controls preload="none" src="samples/caro_davy.wav"></audio> [caro_davy.wav](samples/caro_davy.wav) |
-| Charles | Hello, my name is Charles. | <audio controls preload="none" src="samples/charles.wav"></audio> [charles.wav](samples/charles.wav) |
-| Cosette | Hello, my name is Cosette. | <audio controls preload="none" src="samples/cosette.wav"></audio> [cosette.wav](samples/cosette.wav) |
-| Eponine | Hello, my name is Eponine. | <audio controls preload="none" src="samples/eponine.wav"></audio> [eponine.wav](samples/eponine.wav) |
-| Eve | Hello, my name is Eve. | <audio controls preload="none" src="samples/eve.wav"></audio> [eve.wav](samples/eve.wav) |
-| Fantine | Hello, my name is Fantine. | <audio controls preload="none" src="samples/fantine.wav"></audio> [fantine.wav](samples/fantine.wav) |
-| George | Hello, my name is George. | <audio controls preload="none" src="samples/george.wav"></audio> [george.wav](samples/george.wav) |
-| Jane | Hello, my name is Jane. | <audio controls preload="none" src="samples/jane.wav"></audio> [jane.wav](samples/jane.wav) |
-| Jean | Hello, my name is Jean. | <audio controls preload="none" src="samples/jean.wav"></audio> [jean.wav](samples/jean.wav) |
-| Javert | Hello, my name is Javert. | <audio controls preload="none" src="samples/javert.wav"></audio> [javert.wav](samples/javert.wav) |
-| Marius | Hello, my name is Marius. | <audio controls preload="none" src="samples/marius.wav"></audio> [marius.wav](samples/marius.wav) |
-| Mary | Hello, my name is Mary. | <audio controls preload="none" src="samples/mary.wav"></audio> [mary.wav](samples/mary.wav) |
-| Michael | Hello, my name is Michael. | <audio controls preload="none" src="samples/michael.wav"></audio> [michael.wav](samples/michael.wav) |
-| Paul | Hello, my name is Paul. | <audio controls preload="none" src="samples/paul.wav"></audio> [paul.wav](samples/paul.wav) |
-| Peter Yearsley | Hello, my name is Peter Yearsley. | <audio controls preload="none" src="samples/peter_yearsley.wav"></audio> [peter_yearsley.wav](samples/peter_yearsley.wav) |
-| Stuart Bell | Hello, my name is Stuart Bell. | <audio controls preload="none" src="samples/stuart_bell.wav"></audio> [stuart_bell.wav](samples/stuart_bell.wav) |
-| Vera | Hello, my name is Vera. | <audio controls preload="none" src="samples/vera.wav"></audio> [vera.wav](samples/vera.wav) |
+| Alba | Hello, my name is Alba. | [▶ Listen](samples/alba.wav) |
+| Anna | Hello, my name is Anna. | [▶ Listen](samples/anna.wav) |
+| Azelma | Hello, my name is Azelma. | [▶ Listen](samples/azelma.wav) |
+| Bill Boerst | Hello, my name is Bill Boerst. | [▶ Listen](samples/bill_boerst.wav) |
+| Caro Davy | Hello, my name is Caro Davy. | [▶ Listen](samples/caro_davy.wav) |
+| Charles | Hello, my name is Charles. | [▶ Listen](samples/charles.wav) |
+| Cosette | Hello, my name is Cosette. | [▶ Listen](samples/cosette.wav) |
+| Eponine | Hello, my name is Eponine. | [▶ Listen](samples/eponine.wav) |
+| Eve | Hello, my name is Eve. | [▶ Listen](samples/eve.wav) |
+| Fantine | Hello, my name is Fantine. | [▶ Listen](samples/fantine.wav) |
+| George | Hello, my name is George. | [▶ Listen](samples/george.wav) |
+| Jane | Hello, my name is Jane. | [▶ Listen](samples/jane.wav) |
+| Jean | Hello, my name is Jean. | [▶ Listen](samples/jean.wav) |
+| Javert | Hello, my name is Javert. | [▶ Listen](samples/javert.wav) |
+| Marius | Hello, my name is Marius. | [▶ Listen](samples/marius.wav) |
+| Mary | Hello, my name is Mary. | [▶ Listen](samples/mary.wav) |
+| Michael | Hello, my name is Michael. | [▶ Listen](samples/michael.wav) |
+| Paul | Hello, my name is Paul. | [▶ Listen](samples/paul.wav) |
+| Peter Yearsley | Hello, my name is Peter Yearsley. | [▶ Listen](samples/peter_yearsley.wav) |
+| Stuart Bell | Hello, my name is Stuart Bell. | [▶ Listen](samples/stuart_bell.wav) |
+| Vera | Hello, my name is Vera. | [▶ Listen](samples/vera.wav) |
 
 ### Other languages
 
 | Voice | Language | Sample | Listen |
 | --- | --- | --- | --- |
-| Estelle | French | Bonjour, je m'appelle Estelle. | <audio controls preload="none" src="samples/estelle.wav"></audio> [estelle.wav](samples/estelle.wav) |
-| Giovanni | Italian | Ciao, mi chiamo Giovanni. | <audio controls preload="none" src="samples/giovanni.wav"></audio> [giovanni.wav](samples/giovanni.wav) |
-| Lola | Spanish | Hola, me llamo Lola. | <audio controls preload="none" src="samples/lola.wav"></audio> [lola.wav](samples/lola.wav) |
-| Juergen | German | Hallo, ich heiße Juergen. | <audio controls preload="none" src="samples/juergen.wav"></audio> [juergen.wav](samples/juergen.wav) |
-| Rafael | Portuguese | Olá, o meu nome é Rafael. | <audio controls preload="none" src="samples/rafael.wav"></audio> [rafael.wav](samples/rafael.wav) |
+| Estelle | French | Bonjour, je m'appelle Estelle. | [▶ Listen](samples/estelle.wav) |
+| Giovanni | Italian | Ciao, mi chiamo Giovanni. | [▶ Listen](samples/giovanni.wav) |
+| Lola | Spanish | Hola, me llamo Lola. | [▶ Listen](samples/lola.wav) |
+| Juergen | German | Hallo, ich heiße Juergen. | [▶ Listen](samples/juergen.wav) |
+| Rafael | Portuguese | Olá, o meu nome é Rafael. | [▶ Listen](samples/rafael.wav) |
 
-All sample files live in [`samples/`](samples/).
+All files: [`samples/`](samples/) · Gallery page: [`listen.html`](listen.html)
+
+### Enable the Listen gallery (GitHub Pages)
+
+1. Repo **Settings** → **Pages**
+2. **Source:** Deploy from a branch
+3. Branch: `main` / folder: `/ (root)` → Save
+4. Open: `https://hamzaraouf.github.io/pocket-tts-setup/listen.html`
 
 ## Requirements
 
@@ -124,9 +134,10 @@ Stop the server with `Ctrl+C`.
 Pocket-tts/
 ├── app.py                 # FastAPI server
 ├── voices.py              # Voice catalog
+├── listen.html            # Standalone listen gallery (GitHub Pages)
 ├── requirements.txt       # pip dependencies
 ├── pyproject.toml         # uv / project metadata
-├── samples/               # Pre-generated WAV for each voice (README)
+├── samples/               # 16-bit PCM WAV per voice
 ├── scripts/
 │   └── generate_samples.py
 ├── static/
@@ -148,3 +159,4 @@ uv run python scripts/generate_samples.py
 - First launch downloads model weights (needs internet). Later runs work offline.
 - The first **Play** for each voice is slower (voice state loads once, then is cached).
 - Keep the terminal open while using the browser.
+- Sample WAVs are **16-bit PCM** so GitHub’s built-in player can play them.

@@ -31,7 +31,9 @@ def main() -> None:
         audio = model.generate_audio(state, voice["sample"])
         arr = audio.detach().cpu().numpy().astype(np.float32)
         arr = np.clip(arr, -1.0, 1.0)
-        scipy.io.wavfile.write(out_path, model.sample_rate, arr)
+        # GitHub / browsers play 16-bit PCM WAV; float WAV often fails.
+        pcm = (arr * 32767.0).astype(np.int16)
+        scipy.io.wavfile.write(out_path, model.sample_rate, pcm)
 
     print(f"Done. Wrote {len(VOICES)} files to {OUT_DIR}")
 
